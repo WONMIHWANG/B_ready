@@ -1,0 +1,427 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 14px;
+    line-height: 25px;
+    min-width: 1320px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: rgb(255, 255, 255);
+    padding: 0 50px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.header_inner {
+    width: 1320px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+}
+
+.nav>li {
+    list-style: none;
+    position: relative;
+    padding: 0 50px;
+}
+
+.nav>li>a {
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    color: #35160e;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.nav>li>a::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    width: 100%;
+    height: 3px;
+    background: #333;
+    transform: scaleX(0);
+    transition: 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+.nav>li>a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav li a:hover .sub {
+    display: block;
+}
+
+.sub {
+    width: 100%;
+    background: white;
+    display: none;
+    clear: both;
+    position: absolute;
+    right: 0;
+    padding: 50px 0 30px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.02);
+    font-size: 17px;
+    color: #35160e;
+}
+
+.sub li {
+    margin: 10px 0;
+}
+
+.sub li a {
+    opacity: 0.8;
+}
+
+.sub li a:hover {
+    opacity: 1;
+}
+
+.top {
+    width: 100%;
+    background: url(../drink_img/1.jpg) 0 -550px;
+    height: 350px;
+    opacity: 0.8;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 450px;
+    display: flex;
+    overflow: hidden;
+    font-family: 'Damion';
+    opacity: 1;
+}
+
+section div {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    float: left;
+}
+
+section div:nth-child(1) {
+    position: relative;
+    width: 50%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+section div h2 {
+    position: absolute;
+    white-space: nowrap;
+    margin-top: 20px;
+}
+
+section div .M {
+    top: 190px;
+    animation: animate 15s linear infinite;
+    font-size: 100px;
+    color: white;
+    letter-spacing: 10px;
+}
+
+section div .M.M1 {
+    left: 100%;
+}
+
+section div .M.M2 {
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: white;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(140%);
+    }
+
+    100% {
+        transform: translateX(-250%);
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 550px;
+    left: 50%;
+    margin-left: -200px;
+    height: 0px;
+    width: 400px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+
+.menu li {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu li a {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 25px;
+    opacity: 0.6;
+    border: 3px solid #f69b17;
+    border-radius: 100px;
+    color: #f69b17;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f69b17;
+    top: 100%;
+    left: 0;
+    transition: all 0.4s;
+    z-index: -100;
+}
+
+.menu li a:hover::before {
+    transform: translateY(-100%);
+}
+
+.menu li a:hover {
+    color: white;
+}
+
+
+.menu .active1 a {
+    opacity: 1;
+    background: #f69b17;
+    color: white;
+}
+
+.c2 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 300px 0;
+    /* background: #fff1d7; */
+    background: white;
+}
+
+.c2 .drink {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1320px;
+    flex-wrap: wrap;
+    z-index: 1;
+    gap: 100px;
+}
+
+.c2 .drink .card {
+    position: relative;
+    width: 220px;
+    height: 300px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    border-top: 1.5px solid rgba(206, 206, 206, 0.3);
+    border-left: 1.5px solid rgba(206, 206, 206, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.c2 .drink .card .content {
+    padding: 50px 20px 10px;
+    text-align: center;
+    transform: translateY(0px);
+    opacity: 0.8;
+    transition: 0.5s;
+    position: relative;
+}
+
+.c2 .drink .card .content h3 {
+    margin-top: 15px;
+}
+
+.seemore {
+    background: #fff1d7;
+    width: 220px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+    color: #35160e;
+    display: none;
+}
+
+.seemore p {
+    margin: 10px 0 20px;
+    font-size: 12px;
+}
+
+.c2 .drink .card:hover .content a {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.c2 .drink .card:hover .content {
+    padding: 30px 20px 10px;
+}
+
+.smlogo {
+    display: block;
+    width: 70%;
+    margin: 100px auto 0;
+}
+
+
+.c2 .drink .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 15px;
+    margin-top: 15px;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.5s;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.c2 .beverage {
+    display: none;
+}
+
+
+
+
+footer {
+    background: #f6d393;
+    width: 100%;
+    height: 310px;
+    bottom: 100px;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.footer_inner {
+    width: 1320px;
+    height: 100%;
+    margin: auto;
+    color: #35160e;
+    line-height: 22px;
+}
+
+.footer_inner h1 {
+    width: 119px;
+    height: 62px;
+    background: url(../bread_img/Logo.png);
+    background-size: cover;
+    margin: auto;
+}
+
+.footer_inner h4 {
+    margin-top: 20px;
+}
+
+footer .copy {
+    background: #35160e;
+    height: 50px;
+    line-height: 50px;
+    color: #f6d393;
+}
+
+.footer_inner .t_ctn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer_inner .left {
+    text-align: right
+}
+
+.left h5:nth-child(2) a,
+.right h5:nth-child(2) a {
+    padding: 10px 15px;
+    display: inline-block;
+    margin-top: 10px;
+    background: #35160e;
+    border-radius: 2px;
+    color: oldlace;
+}
+
+.footer_inner .right {
+    text-align: left;
+}
+
+.footer_inner ion-icon {
+    font-size: 35px;
+    margin-top: 20px;
+    color: oldlace;
+    transition: 0.3s;
+}
+
+.footer_inner ion-icon:hover {
+    color: #35160e;
+}

@@ -1,0 +1,389 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 14px;
+    line-height: 25px;
+    min-width: 1320px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: rgb(255, 255, 255);
+    padding: 0 50px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.header_inner {
+    width: 1320px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+}
+
+.nav>li {
+    list-style: none;
+    position: relative;
+    padding: 0 50px;
+}
+
+.nav>li>a {
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    color: #35160e;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.nav>li>a::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    width: 100%;
+    height: 3px;
+    background: #333;
+    transform: scaleX(0);
+    transition: 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+.nav>li>a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav li a:hover .sub {
+    display: block;
+}
+
+.sub {
+    width: 100%;
+    background: white;
+    display: none;
+    clear: both;
+    position: absolute;
+    right: 0;
+    padding: 50px 0 30px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.02);
+    font-size: 17px;
+    color: #35160e;
+}
+
+.sub li {
+    margin: 10px 0;
+}
+
+.sub li a {
+    opacity: 0.8;
+}
+
+.sub li a:hover {
+    opacity: 1;
+}
+
+h3 {
+    font-size: 90px;
+    font-family: 'Damion';
+    color: #35160e;
+    text-align: left;
+    width: 1320px;
+    margin: auto;
+    padding: 200px 0 0;
+}
+
+.scroll-fixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.top {
+    width: 100%;
+    height: 200px;
+    background: #777;
+    margin: 100px 0 0px;
+    background: url(../community_img/top.jpg) 0 -40px no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.top:hover {
+    opacity: 1;
+}
+
+.board_list_wrap {
+    width: 1320px;
+    margin: auto;
+    height: 900px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 10px dotted #35160e;
+}
+
+.board_list {
+    width: 100%;
+    border-top: 5px solid #35160e;
+    font-weight: bold;
+}
+
+thead {
+    background: #f6d393;
+    color: #35160e;
+}
+
+.board_list tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.board_list td {
+
+    font-size: 17px;
+    width: 15%;
+    text-align: center;
+}
+
+.board_list th {
+    font-size: 20px;
+    width: 15%;
+    padding: 30px;
+}
+
+.board_list .title {
+    text-align: left;
+    width: 40%;
+}
+
+.board_list .title:hover {
+    text-decoration: underline;
+}
+
+.board_list_wrap .paging {
+    margin-top: 100px;
+    font-size: 0;
+    text-align: center;
+}
+
+.board_list_wrap .paging a {
+    display: inline-block;
+    border-radius: 100px;
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #35160e;
+}
+
+.board_list_wrap .paging a:first-child {
+    margin-left: 0;
+}
+
+.board_list_wrap .paging a.bt {
+    background: #f6d393;
+}
+
+.board_list_wrap .paging a.num {
+    border: 1px solid #f6d393;
+    color: #f6d393;
+    font-weight: 600;
+}
+
+.board_list_wrap .paging a.num.on {
+    background: #bf7b16;
+    color: white;
+}
+
+#board {
+    width: 1320px;
+    margin: 100px auto 300px;
+    text-align: left;
+    border: #35160e 3px solid;
+    color: #35160e;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.1);
+}
+
+#board li {
+    width: 100%;
+}
+
+#board li p {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+#board li a {
+    display: block;
+    border-bottom: 2px solid #f6d393;
+    padding: 25px 30px;
+    background: url(../community_img/icon.png) no-repeat 95% 50%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#board li a b {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+#board li:hover a {
+    font-weight: bold;
+    background-color: #f6d393;
+}
+
+#board li.on a {
+    font-weight: bold;
+    background-color: #f6d393;
+    background: #f6d393 url(../community_img/icon2.png) no-repeat 95% 50%;
+}
+
+#board li:last-child a {
+    border-top: 2px;
+}
+
+#board li div {
+    width: 100%;
+    border-bottom: 1px solid #f6d393;
+    padding: 50px 80px;
+    box-sizing: border-box;
+    display: none;
+}
+
+#board li div b {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+footer {
+    background: #f6d393;
+    width: 100%;
+    height: 310px;
+    bottom: 100px;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.footer_inner {
+    width: 1320px;
+    height: 100%;
+    margin: auto;
+    color: #35160e;
+    line-height: 22px;
+}
+
+.footer_inner h1 {
+    width: 119px;
+    height: 62px;
+    background: url(../community_img/Logo.png);
+    background-size: cover;
+    margin: auto;
+}
+
+.footer_inner h4 {
+    margin-top: 20px;
+}
+
+footer .copy {
+    background: #35160e;
+    height: 50px;
+    line-height: 50px;
+    color: #f6d393;
+}
+
+.footer_inner .t_ctn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer_inner .left {
+    text-align: right
+}
+
+.left h5:nth-child(2) a,
+.right h5:nth-child(2) a {
+    padding: 10px 15px;
+    display: inline-block;
+    margin-top: 10px;
+    background: #35160e;
+    border-radius: 2px;
+    color: oldlace;
+}
+
+.footer_inner .right {
+    text-align: left;
+}
+
+.footer_inner ion-icon {
+    font-size: 35px;
+    margin-top: 20px;
+    color: oldlace;
+    transition: 0.3s;
+}
+
+.footer_inner ion-icon:hover {
+    color: #35160e;
+}

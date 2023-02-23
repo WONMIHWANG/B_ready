@@ -1,0 +1,398 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ion-icon {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: rgb(255, 255, 255);
+    padding: 0 50px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.header_inner {
+    width: 1320px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+}
+
+.nav>li {
+    list-style: none;
+    position: relative;
+    padding: 0 50px;
+}
+
+.nav>li>a {
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    color: #35160e;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.nav>li>a::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    width: 100%;
+    height: 3px;
+    background: #333;
+    transform: scaleX(0);
+    transition: 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+.nav>li>a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav li a:hover .sub {
+    display: block;
+}
+
+.sub {
+    width: 100%;
+    background: white;
+    display: none;
+    clear: both;
+    position: absolute;
+    right: 0;
+    padding: 50px 0 30px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.02);
+    font-size: 17px;
+    color: #35160e;
+}
+
+.sub li {
+    margin: 10px 0;
+}
+
+.sub li a {
+    opacity: 0.8;
+}
+
+.sub li a:hover {
+    opacity: 1;
+}
+
+section h1 {
+    font-family: 'Damion';
+    font-size: 50px;
+    margin: 20px 0;
+    color: #35160e;
+}
+
+.wrap {
+    width: 100%;
+    margin: 100px auto;
+    padding: 100px 0 0;
+    height: 700px;
+    font-size: 17px;
+    font-weight: 700;
+    background: linear-gradient(#f6d393bd, #f6d393bd 50%, #fff 50%, #fff 50%);
+}
+
+.wrap h1 {
+    margin: 30px auto;
+    color: #35160e;
+    font-size: 70px;
+    font-family: 'Damion';
+}
+
+section p {
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.wrap iframe {
+    margin: 50px 0 70px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+section dl {
+    margin: 15px 0;
+}
+
+section {
+    text-align: left;
+    height: 380px;
+    width: 500px;
+}
+
+.bus dd {
+    width: 100%;
+}
+
+.bus dd div {
+    width: 60%;
+    display: inline-block;
+}
+
+.bus b {
+    margin-right: 10px;
+    color: #35160e;
+    font-weight: bolder;
+}
+
+.contactus {
+    position: relative;
+    width: 1320px;
+    margin: 0 auto 300px;
+    box-sizing: border-box;
+}
+
+.contactus span {
+    font-weight: bold;
+    color: #35160e;
+}
+
+.form {
+    grid-area: form;
+    background: #d1bea0;
+    padding: 30px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.map {
+    grid-area: map;
+}
+
+.box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "info form"
+        "info form";
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+.form h1 {
+    font-size: 50px;
+    margin: 50px 0 0;
+    font-family: 'Damion';
+    color: #35160e;
+}
+
+.formbox {
+    position: relative;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.formbox .row50 {
+    display: flex;
+    gap: 20px;
+}
+
+.inputbox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.formbox .row100 .inputbox {
+    width: 100%;
+}
+
+.inputbox input {
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 2px solid #35160e;
+}
+
+.inputbox textarea {
+    padding: 15px;
+    font-size: 1.1em;
+    outline: none;
+    border: 2px solid #35160e;
+    resize: none;
+    min-height: 120px;
+    margin-bottom: 30px;
+}
+
+.inputbox input[type="submit"] {
+    background: #35160e;
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    max-width: 120px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 14px 15px;
+}
+
+.inputbox ::placeholder {
+    color: #35160e86;
+    font-weight: 500;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 15px;
+}
+
+.info {
+    grid-area: info;
+    background: #f6d393;
+    padding: 70px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sci {
+    margin-top: 50px;
+    display: flex;
+    gap: 15px;
+}
+
+.sci li a {
+    color: #35160e;
+    font-size: 1em;
+}
+
+.sci li a:hover {
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+footer {
+    background: #f6d393;
+    width: 100%;
+    height: 310px;
+    bottom: 100px;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.footer_inner {
+    width: 1320px;
+    height: 100%;
+    margin: auto;
+    color: #35160e;
+    line-height: 22px;
+}
+
+.footer_inner h1 {
+    width: 119px;
+    height: 62px;
+    background: url(../about_img/Logo.png);
+    background-size: cover;
+    margin: auto;
+}
+
+.footer_inner h4 {
+    margin-top: 20px;
+}
+
+footer .copy {
+    background: #35160e;
+    height: 50px;
+    line-height: 50px;
+    color: #f6d393;
+}
+
+.footer_inner .t_ctn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer_inner .left {
+    text-align: right
+}
+
+.left h5:nth-child(2) a,
+.right h5:nth-child(2) a {
+    padding: 10px 15px;
+    display: inline-block;
+    margin-top: 10px;
+    background: #35160e;
+    border-radius: 2px;
+    color: oldlace;
+}
+
+.footer_inner .right {
+    text-align: left;
+}
+
+.footer_inner ion-icon {
+    font-size: 35px;
+    margin-top: 20px;
+    color: oldlace;
+    transition: 0.3s;
+}
+
+.footer_inner ion-icon:hover {
+    color: #35160e;
+}
