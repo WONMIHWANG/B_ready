@@ -1,5 +1,9 @@
 $(function(){
-  $('.nav li').hover(function(){
-   $(this).children('.sub').stop().slideToggle();
-  });
+   $('.nav> li').mouseover(function(){
+    $('.sub').stop().slideDown();
+   });
+
+   $('.nav> li').mouseout(function(){
+    $('.sub').stop().slideUp();
+   });
 });
