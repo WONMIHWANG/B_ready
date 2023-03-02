@@ -6,4 +6,8 @@ $(function(){
    $('.nav> li').mouseout(function(){
     $('.sub').stop().slideUp();
    });
+
+   $('.card').hover(function(){
+      $('.cursor').toggle();
+     });
 });
