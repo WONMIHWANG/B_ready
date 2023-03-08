@@ -17,9 +17,6 @@
         <link rel="stylesheet" href="css/jquery.simplyscroll.css">
         <link rel="stylesheet" href="css/style.css">
 
-    <!-- 마우스 -->
-    <link rel="stylesheet" href="./css/mouse_line.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
@@ -64,6 +61,44 @@
             </div>
         </div>
     </header>
+
+    <div class="m_nav">
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="#none">BRAND</a>
+                    <ul class="M_sub">
+                        <li><a href="./brand.html">브랜드소개</a></li>
+                        <li><a href="./brand.html#bi">BI</a></li>
+                    </ul>
+                </li>
+                <li><a href="#none">MENU</a>
+                    <ul class="M_sub">
+                        <li><a href="./bread.html">브래드</a></li>
+                        <li><a href="./sandwich.html">샌드위치</a></li>
+                        <li><a href="./coffee.html">음료</a></li>
+                    </ul>
+                </li>
+                <li><a href="#none">ABOUT</a>
+                <ul class="M_sub">
+                    <li><a href="./keypoint.html">OUR VALUE</a></li>
+                    <li><a href="./contactus.html">찾아오시는 길</a></li>
+                </ul></li>
+                <li><a href="#none">COMMUNITY</a>
+                <ul class="M_sub">
+                    <li><a href="./notice.html">공지사항</a></li>
+                    <li><a href="./event.html">이벤트</a></li>
+                    <li><a href="./event.html#C2_title">SNS</a></li>
+                </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <div class="ofh">
         <div class="swiper-container slide2">
@@ -112,14 +147,20 @@
                         <p>가치투자를 하며 지속가능성을 굽습니다.<br>
                             유해한 것을 지양하고 유익함을 지향하며<br>
                             사람과 자연이 함께 공생하는 미래를 그립니다.</p>
-                            <b class="button"><a href="./keypoint.html">자세히</a></b>
+                            <b class="button" style="margin-top: 30px;"><a href="./keypoint.html">자세히</a></b>
                     </span>
-                    <span class="imghide"></span>
-                    <span data-aos="fade-right"></span>
+                    <span class="section1_hidden"></span>
+                    <span class="section1_hidden" data-aos="fade-right"></span>
                 </li>
-                <li><span data-aos="fade-up" data-aos-duration="3000"></span></li>
+                <li><span class="section1_hidden" data-aos="fade-up" data-aos-duration="2000"></span></li>
             </ul>
-        </div>
+<div class="swiper-container slide-m">
+            <div class="MobileBanner swiper-wrapper" class="mobileimg">
+                <div class="swiper-slide"><img src="./main_img/mobileimg1.jpg" alt="자연이미지1"></div>
+                <div class="swiper-slide"><img src="./main_img/mobileimg2.jpg" alt="자연이미지2"></div>
+            </div>
+        </div> 
+    </div>
         </div>
 
         <div class="world">
@@ -127,7 +168,7 @@
             <div class="text">
                 <h1><small>Taste of</small><br><br>Happiness<br></h1><b class="button"><a href="./bread.html">더보기</a></b>
             </div>
-            <section class="poster">
+            <section class="post poster">
                 <figure class="ilbuni">
                     <div></div>
                 </figure>
@@ -138,7 +179,7 @@
                     <div></div>
                 </figure>
             </section>
-            <section class="poster2">
+            <section class="post poster2">
                 <figure class="ilbuni ilbuni2">
                     <div></div>
                 </figure>
@@ -161,7 +202,7 @@
         </div>
 
         <div class="slide">
-            <h1>Beat memu</h1>
+            <h1>Best memu</h1>
             <ul id="scroller">
                 <li style="background: white url(./bread_img/1.jpg) no-repeat; background-position: center;"></li>
                 <li style="background: white url(./bread_img/2.jpg) no-repeat; background-position: center;"></li>
@@ -256,15 +297,9 @@
         </div>
     </footer>
 
-    <div id="drawing_line">
-        <svg class="drawing_line_svg">
-            <circle class="drawing_line_circle" cx="0" cy="0" r="6"></circle>
-            <polyline class="drawing_line_polyline" points=""></polyline>
-        </svg>
-    </div>
-
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="./script/menubar.js"></script>
+    <script src="script/simplyscroll.js"></script>
 
     <!-- 슬라이드 js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script><!-- 수정X -->
@@ -275,7 +310,6 @@
 
     <!--흘러가는 슬라이드--> 
     <script src="script/jquery.simplyscroll.min.js"></script>
-    <script src="script/simplyscroll.js"></script>
 
     <!-- js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!-- aos 라이브러리 -->
@@ -284,8 +318,7 @@
     <!-- 아이콘 -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <script src="script/mouse_line.js"></script>
+    <script src="./script/Mobile_menu.js"></script>
 
     <script>
         let toggle = document.querySelector('.toggle');
@@ -297,7 +330,16 @@
         toggle.onclick = function () {
             menu.classList.toggle('active')
         }
-    </script>details
+    </script>
+
+        <script type="text/javascript">
+        function menuToggle(){
+            const toggleMenu = document.querySelector('.toggle');
+            const section = document.querySelector('section');
+            toggleMenu.classList.toggle('active');
+            section.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>

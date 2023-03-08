@@ -430,7 +430,7 @@ padding: 100px 0;}
 }
 .C3:hover .C3_text span::before{animation: ani2 3s ;}
 @keyframes ani2{
-    from{transform: scaleX(0);}
+    from{transform: scaleX(1);}
     to{transform: scaleX(1);}
 }
 

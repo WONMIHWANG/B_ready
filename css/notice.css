@@ -190,7 +190,6 @@ a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border-bottom: 10px dotted #35160e;
 }
 
 .board_list {

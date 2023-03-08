@@ -29,6 +29,7 @@ a {
     text-decoration: none;
     color: #333;
 }
+img{display: block;}
 
 header {
     position: absolute;
@@ -182,9 +183,7 @@ h3 {
 .C {
     width: 1120px;
     height: 1300px;
-    margin: 0 auto 100px;
-    padding: 100px;
-    border-bottom: 10px dotted #35160e;
+    margin: 0 auto 150px;
 }
 
 .C h1 {
@@ -262,7 +261,8 @@ h3 {
 #C2_title {
     width: 1320px;
     margin: auto;
-    padding: 100px;
+    padding: 0 0 100px 100px;
+    padding-top: 0;
 }
 
 .C2 h1 {

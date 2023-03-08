@@ -163,11 +163,14 @@ h1 {
     position: relative;
 }
 
-.c1 h1 {
-    font-size: 70px;
+.c1 h2 {
+    font-size: 40px;
     line-height: 65px;
     font-weight: bolder;
     animation: ani 5s;
+    font-family: 'NanumSquareNeo-Variable';
+    color: #ab7234;
+    
 }
 
 @keyframes ani {

@@ -47,7 +47,6 @@ Note all DIVs are generated and should not be hard-coded
 	}
 	
 		.simply-scroll-list li {
-			padding: 0;
 			margin: 0;
 			list-style: none;
 		}
@@ -147,7 +146,7 @@ Note all DIVs are generated and should not be hard-coded
 		height: 200px;
 	}
 	
-		.simply-scroll .simply-scroll-list {}
+		.simply-scroll .simply-scroll-list { margin: 20px 0;}
 		
 		.simply-scroll .simply-scroll-list li {
 			float: left;
