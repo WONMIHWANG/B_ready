@@ -281,9 +281,9 @@ section div .M.M2 {
 
 .c2 .drink {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        grid-auto-rows:300px; gap:20px; margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 1320px;
     z-index: 1;
     gap: 70px;
@@ -299,7 +299,6 @@ section div .M.M2 {
     overflow: hidden;
     border-top: 1.5px solid rgba(206, 206, 206, 0.3);
     border-left: 1.5px solid rgba(206, 206, 206, 0.3);
-    backdrop-filter: blur(5px);
 }
 
 .c2 .drink .card .content {
