@@ -32,16 +32,12 @@ a {
     color: #333;
 }
 
-header:hover {
-    cursor: default;
-}
-
 header {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 70px;
     background: rgb(255, 255, 255);
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.02);
     box-sizing: border-box;
@@ -57,6 +53,10 @@ header {
     align-items: center;
     font-weight: bold;
 }
+header .logo{
+    scale: 0.8;
+    margin-bottom: -4px;
+}
 
 .group {
     display: flex;
@@ -64,13 +64,11 @@ header {
 }
 
 .nav {
-    position: relative;
     display: flex;
 }
 
 .nav>li {
     list-style: none;
-    position: relative;
     padding: 0 50px;
 }
 
@@ -79,14 +77,17 @@ header {
     text-decoration: none;
     font-size: 20px;
     color: #35160e;
-    text-transform: uppercase;
     letter-spacing: 0.1em;
+    display: block;
+    padding: 20px 0;
+    position: relative;
+    text-transform: uppercase;
 }
 
 .nav>li>a::before {
     content: '';
     position: absolute;
-    bottom: -7px;
+    bottom: 15px;
     width: 100%;
     height: 3px;
     background: #333;
@@ -100,10 +101,6 @@ header {
     transform-origin: left;
 }
 
-.nav li a:hover .sub {
-    display: block;
-}
-
 .sub {
     width: 100%;
     background: white;
@@ -111,28 +108,38 @@ header {
     clear: both;
     position: absolute;
     right: 0;
-    padding: 50px 0 30px;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.02);
     font-size: 17px;
     color: #35160e;
+    padding: 0px 0;
 }
-
-.sub li {
-    margin: 10px 0;
+.sub_inner{
+    width: 1320px; margin: auto;
+    display: flex;
+    justify-content: end;
 }
-
+.sub li { margin: 20px 0;}
 .sub li a {
     opacity: 0.8;
+    display: block;
+    padding: 5px 0;
+}
+
+.sub li:nth-child(4){
+    width: 251.47px;
+}
+.sub li:nth-child(3){
+    width: 184.88px;
+}
+.sub li:nth-child(2){
+    width: 171.2px;
+}
+.sub li:nth-child(1){
+    width: 185.48px;
 }
 
 .sub li a:hover {
     opacity: 1;
-}
-
-.scroll-fixed {
-    position: fixed;
-    top: 0px;
-    left: 0px;
 }
 
 h1 {
@@ -152,15 +159,19 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 70px;
     position: relative;
 }
 
-.c1 h1 {
-    font-size: 70px;
+.c1 h2 {
+    font-size: 40px;
     line-height: 65px;
     font-weight: bolder;
     animation: ani 5s;
+    font-family: 'NanumSquareNeo-Variable';
+    color: #ab7234;
+    text-shadow: 2px 2px #3333333b;
+    
 }
 
 @keyframes ani {
@@ -284,7 +295,7 @@ h1 {
 .c3_right {
     width: 70%;
     height: 100%;
-    background: #624334;
+    background: #966751;
     display: flex;
     justify-content: center;
     align-items: center;
